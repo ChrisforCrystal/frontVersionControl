@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    /* Base Options */
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2022", // 编译目标：现代浏览器支持的 ES2022
+    "useDefineForClassFields": true,
+    // [Environment] 包含 DOM 库，因为这是跑在浏览器的代码
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    /* Bundler mode */
+    // [Bundler] 告诉 TS 我们有打包工具 (Vite/Webpack)，允许它处理 imports
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+    "noEmit": true, // 只做类型检查，不生成 .js 文件 (让 Vite 去生成)
+    "jsx": "react-jsx", // React 17+ 新转换模式 (无需 import React)
+    /* Linting */
+    "strict": true, // 开启严格模式 (必开)
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  },
+  // 仅包含 src 目录源码
+  "include": [
+    "src"
+  ]
+}

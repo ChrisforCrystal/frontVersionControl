@@ -1,0 +1,14 @@
+{
+  "files": [],
+  "references": [
+    // [Solution Pattern]
+    // 引用应用代码配置 (用于 src/ 下的 React 代码)
+    {
+      "path": "./tsconfig.app.json"
+    },
+    // 引用节点工具配置 (用于 vite.config.ts 等构建脚本)
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}
